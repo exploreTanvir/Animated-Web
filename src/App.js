@@ -1,36 +1,33 @@
 import React from 'react';
-import Navbar from './components/Navbar/Navbar';
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import "../node_modules/bootstrap/dist/js/bootstrap.bundle"
 import {
+    Redirect,
     Route,
-    BrowserRouter as Router,
     Switch
-  } from "react-router-dom";
-import Home from './components/Home/Home';
+} from "react-router-dom";
+import { } from 'react-router-dom/cjs/react-router-dom.min';
 import About from './components/About/About';
-import Services from './components/Services/Services';
 import Contact from './components/Contact/Contact';
+import Home from './components/Home/Home';
+import Services from './components/Services/Services';
+import Navbar from './components/Navbar/Navbar';
+import Footer from './components/Footer/Footer';
 
 
 const App = () => {
     return (
-       <Router>
+       <>
+       <Navbar/>
         <Switch>
-            
-            <Route path='/'>
-                <Home/>
-            </Route>
-            <Route path='/about'>
-                <About/>
-            </Route>
-            <Route path='/services'>
-                <Services/>
-            </Route>
-            <Route path='/contact'>
-                <Contact/>
-            </Route>
-         <Navbar/>
+            <Route exact path='/' component={Home}/>
+            <Route exact path='/about' component={About}/>
+            <Route exact path='/contact' component={Contact}/>
+            <Route exact path='/services' component={Services}/>   
+            <Redirect to="/"/>
          </Switch>
-       </Router>
+         <Footer/>
+     </>
     );
 };
 

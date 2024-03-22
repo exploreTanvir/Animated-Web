@@ -1,0 +1,31 @@
+.btn-get-started {
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 7px 20px;
+    border-radius: 50px;
+    transition: 0.5s;
+    color: #3498db;
+    border: 2px solid #3498db;
+    text-decoration: none;
+}
+.btn-get-started:hover {
+    background: #3498db;
+    color: #fff;
+}
+.card-img-top:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+.image {
+    overflow: hidden;
+    border-radius: 2%;
+}
+.image img {
+    transform: scale(1);
+    transition: 0.3s ease-in-out;
+}
+.card {
+    border-radius: 2%;
+}
